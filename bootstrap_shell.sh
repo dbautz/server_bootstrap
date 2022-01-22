@@ -7,4 +7,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 pip3 install thefuck --user
 
-wget -O ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/dbautz.zsh-theme
+wget -O ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/dbautz.zsh-theme https://raw.githubusercontent.com/dbautz/server_bootstrap/main/dbautz.zsh-theme
+wget -O ~/.zshrc https://raw.githubusercontent.com/dbautz/server_bootstrap/main/.zshrc
+
+source ~/.zshrc
