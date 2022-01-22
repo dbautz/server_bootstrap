@@ -15,4 +15,4 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
     DOMAINNAME=""
 fi
-PROMPT=$'%{\e[38;2;${ral_3003}m%}%n@%m$DOMAINNAME%}%{\e[38;2;${ral_9016}m%}: %{\e[38;2;${ral_5018}m%}%~ %{\e[38;2;${ral_1027}m%}%#%{\e[0m%} '
+PROMPT=$'%{\e[38;2;${ral_3003}m%}%n%{\e[38;2;${ral_1027}m%}@%{\e[38;2;${ral_3003}m%}%m$DOMAINNAME%}%{\e[38;2;${ral_9016}m%}: %{\e[38;2;${ral_5018}m%}%~ %{\e[38;2;${ral_1027}m%}%#%{\e[0m%} '

@@ -4,7 +4,8 @@ users:
       groups: users, admin
       sudo: ALL=(ALL) NOPASSWD:ALL
       shell: /bin/zsh
-      passwd: $y$j9T$PbBjHMkYo1h.YfblJuYuR1$DsIxEyPfHKLDSX/LUwKhecJvYNYQnJOX.cLlNzZpt.2
+      lock_passwd: false
+      passwd: $6$hvbN4HDtZnOPcCGg$pcCctebpQPVBokgWB33t2d.ZBQ6hOFY91ntg6jN7YXrwU816CSWVBy/nBKbu8zbvrZwTjsPam0mF5K6zvmVKa0
       ssh_authorized_keys:
           - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAgEAnlT0RWQ6mE+DED7E7it80MFfVkaxxquFUNcrEGS6Wu2NehKzx04P94s2XwezeJvw4wDw3SgfY3lyg/b+ytOj/6GxIZn0HDSZ0X4kWfSaekaQel5u0ujI/f8PB/9zkG1a42zmevh++Fv5miUmvS8ZX4kiikDhG67VjXIxGoQZQChpqwkWF69w23Zm6TxcbKOBNEjXdAqvHiT2uUnCOUM/P7xT4pnDdMAjlaLHlX5iAqZywRdhk9zCH78WLI7PPTnDw0C8bUNl57sZBPrj9aVZCg/k7lZqF/qYlwbIK9rncnBfRQlUAvClPn11r4QdYxZ+jEZJTM3B20u1LobpEMylspVicJED+DgnHo8dosF+TDNlDjviOwAHUq2JCDmDyPlTYv22NSZOAtieTYKgKjJ5Pg615NKFS5zOyxiagZagujLr5gA0CNjXsPuRVU++rzswpIkYjECRS8qwDWX0AC/1ikgo4MO8jNWwNCT2XZuzJpnS40OZGz9wVjrXDMEZzzrjJKyxGuxm4DHN4hDRdy44bWSjt6WWcXVYdeZFTExyO+2qWKIdrbzt5snNF/xjmG+imCbPA6ECmrmnTx/kQcEfYtQ+2PXa7C5a4gG2q1tv/dfiNqpFH77RV7NAJTm0nWMsW84o6z9A8Evuq8bmq/rTYvpYRr7o2MSvWfavcKpGOOE= dbautz@dbautz.com
 packages:
@@ -28,4 +29,5 @@ runcmd:
     - sed -i -e '/^#AllowAgentForwarding/s/^.*$/AllowAgentForwarding no/' /etc/ssh/sshd_config
     - sed -i -e '/^#AuthorizedKeysFile/s/^.*$/AuthorizedKeysFile .ssh\/authorized_keys/' /etc/ssh/sshd_config
     - sed -i '$a AllowUsers dbautz' /etc/ssh/sshd_config
+    - su - dbautz -c 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/dbautz/server_bootstrap/main/bootstrap_shell.sh)"'
     - reboot
