@@ -7,5 +7,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 pip3 install thefuck --user
 
+git clone https://github.com/powerline/fonts.git --depth=1 ~/fonts
+~/fonts/install.sh
+rm -rf fonts
+
 curl https://raw.githubusercontent.com/dbautz/server_bootstrap/main/dbautz.zsh-theme --output ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/dbautz.zsh-theme
 curl https://raw.githubusercontent.com/dbautz/server_bootstrap/main/.zshrc --output ~/.zshrc

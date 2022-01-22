@@ -1,12 +1,4 @@
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ]; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ]; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
+PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -16,7 +8,9 @@ ZSH_THEME="dbautz"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(history-substring-search zsh-autosuggestions thefuck)
+plugins=(history-substring-search zsh-autosuggestions thefuck systemadmin jsontools)
+
+zstyle ':omz:update' mode auto
 
 source $ZSH/oh-my-zsh.sh
 
