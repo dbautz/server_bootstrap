@@ -1,4 +1,4 @@
-#! /bin/zsh
+#! /bin/sh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -9,5 +9,3 @@ pip3 install thefuck --user
 
 curl https://raw.githubusercontent.com/dbautz/server_bootstrap/main/dbautz.zsh-theme --output ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/dbautz.zsh-theme
 curl https://raw.githubusercontent.com/dbautz/server_bootstrap/main/.zshrc --output ~/.zshrc
-
-source ~/.zshrc
