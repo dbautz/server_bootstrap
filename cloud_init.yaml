@@ -12,7 +12,7 @@ packages:
     - zsh
     - fail2ban
     - ufw
-    - python3-pip
+    - pipx
     - git
 package_update: true
 package_upgrade: true
