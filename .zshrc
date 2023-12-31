@@ -15,5 +15,17 @@ zstyle ':omz:update' mode auto
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
-
-export EDITOR='vim'
+export TERM=xterm-256color
+if command -v vim.tiny &> /dev/null
+then
+    export EDITOR=vim.tiny
+elif command -v vim &> /dev/null
+then
+    export EDITOR=vim
+elif command -v vim.basic &> /dev/null
+then
+    export EDITOR=vim.basic
+elif command -v vi &> /dev/null
+then
+    export EDITOR=vi
+fi
