@@ -1,6 +1,6 @@
 # server_bootstrap
 
-## Setup Ansible
+## Add Ansible
 `curl -sSL https://raw.githubusercontent.com/dbautz/server_bootstrap/main/add_ansible.sh | sudo bash`
 
 
