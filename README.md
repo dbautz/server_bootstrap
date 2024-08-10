@@ -1,7 +1,7 @@
 # server_bootstrap
 
 ## Setup Ansible
-`curl -sSL https://raw.githubusercontent.com/yourusername/yourrepo/main/create_ansible_user.sh | sudo bash`
+`curl -sSL https://raw.githubusercontent.com/dbautz/server_bootstrap/main/create_ansible_user.sh | sudo bash`
 
 
 ## ZSH
