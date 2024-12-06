@@ -9,7 +9,7 @@ curl -sSL https://raw.githubusercontent.com/dbautz/server_bootstrap/main/add_ans
 
 ## ZSH
 ```
-sudo apt update && sudo apt install zsh git pipx
+sudo apt update && sudo apt install zsh git pipx curl
 ```
 ```
 chsh -s $(which zsh)
