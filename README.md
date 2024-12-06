@@ -11,7 +11,9 @@ curl -sSL https://raw.githubusercontent.com/dbautz/server_bootstrap/main/add_ans
 ```
 sudo apt update && sudo apt install zsh git pipx
 ```
-
+```
+chsh -s $(which zsh)
+```
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/dbautz/server_bootstrap/main/shell/bootstrap_shell.sh)" && source ~/.zshrc
